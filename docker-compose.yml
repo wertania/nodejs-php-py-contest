@@ -1,0 +1,23 @@
+# POTGRES DB
+version: '2.0'
+
+services:
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dbusr
+      POSTGRES_PASSWORD: uEA7t8ReFUa8E89u9tFchWntRlfS2LRUaNBegaEZ
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+    # ports:
+    #   - "5432:5432"
+    # networks:
+    #   - postgres
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
