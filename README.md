@@ -16,6 +16,13 @@ docker build --tag flask-docker .
 docker run -p 8002:8002 flask-docker
 ```
 
+## build php app
+
+```
+cd python
+docker build --tag php-docker .
+docker run -p 8003:80 php-docker
+```
 
 
 ## Run all apps
