@@ -15,6 +15,12 @@ services:
     ports:
       - 8002:8002
 
+  php:
+    image: php-docker
+    restart: unless-stopped
+    ports:
+      - 8003:80
+
   db:
     image: postgres
     restart: unless-stopped
